@@ -8,8 +8,16 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "PlaySoundTool.h"
+#import "PlayMusicTool.h"
+#import "NSObject+Extension.h"
+#import "Music.h"
+#import "LMusicTableViewCell.h"
+#import "LPlayMusicViewController.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSArray *musics;
 
 @property (nonatomic, strong) AVAudioRecorder *recoder;
 @property (nonatomic, strong) CADisplayLink *link;
@@ -19,9 +27,31 @@
 
 @implementation ViewController
 
+- (NSArray *)musics {
+    if (! _musics) {
+        _musics = [Music objcWithFileName:@"Musics.plist"];
+    }
+    return _musics;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.tableView.rowHeight = 60;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.musics.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    LMusicTableViewCell *cell = [LMusicTableViewCell cellWithTableView:tableView];
+    cell.music = self.musics[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 - (IBAction)startRecord:(id)sender {
@@ -89,6 +119,27 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)play1:(id)sender {
+    [PlaySoundTool playSoundWithName:@"buyao.wav"];
+}
+- (IBAction)play2:(id)sender {
+    [PlaySoundTool playSoundWithName:@"normal.aac"];
+}
+- (IBAction)play3:(id)sender {
+    [PlaySoundTool playSoundWithName:@"win.aac"];
+}
 
+- (IBAction)playMusic:(id)sender {
+    [PlayMusicTool playMusicWithName:@"咖啡.mp3"];
+}
+- (IBAction)pauseMusic:(id)sender {
+    [PlayMusicTool pauseMusicWithName:@"咖啡.mp3"];
+}
+- (IBAction)stopMusic:(id)sender {
+    [PlayMusicTool stopMusicWithName:@"咖啡.mp3"];
+}
+- (IBAction)playOther:(id)sender {
+    [PlayMusicTool playMusicWithName:@"煎饼侠.mp3"];
+}
 
 @end

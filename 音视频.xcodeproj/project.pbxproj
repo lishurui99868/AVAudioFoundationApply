@@ -7,6 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E740869920A57AF700A15AA2 /* LMusicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E740869820A57AF700A15AA2 /* LMusicTableViewCell.m */; };
+		E740869C20A58C2A00A15AA2 /* LPlayMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E740869B20A58C2A00A15AA2 /* LPlayMusicViewController.m */; };
+		E740869E20A58C7E00A15AA2 /* LPlayMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E740869D20A58C7E00A15AA2 /* LPlayMusicViewController.xib */; };
+		E75FFB4920A4189E001A5052 /* m_16.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3520A4189E001A5052 /* m_16.wav */; };
+		E75FFB4A20A4189E001A5052 /* m_03.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3620A4189E001A5052 /* m_03.wav */; };
+		E75FFB4B20A4189E001A5052 /* m_17.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3720A4189E001A5052 /* m_17.wav */; };
+		E75FFB4C20A4189E001A5052 /* m_15.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3820A4189E001A5052 /* m_15.wav */; };
+		E75FFB4D20A4189E001A5052 /* buyao.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3920A4189E001A5052 /* buyao.wav */; };
+		E75FFB4E20A4189E001A5052 /* m_14.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3A20A4189E001A5052 /* m_14.wav */; };
+		E75FFB4F20A4189E001A5052 /* lose.aac in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3B20A4189E001A5052 /* lose.aac */; };
+		E75FFB5020A4189E001A5052 /* m_04.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3C20A4189E001A5052 /* m_04.wav */; };
+		E75FFB5120A4189E001A5052 /* m_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3D20A4189E001A5052 /* m_10.wav */; };
+		E75FFB5220A4189E001A5052 /* m_11.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3E20A4189E001A5052 /* m_11.wav */; };
+		E75FFB5320A4189E001A5052 /* m_05.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB3F20A4189E001A5052 /* m_05.wav */; };
+		E75FFB5420A4189E001A5052 /* m_13.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4020A4189E001A5052 /* m_13.wav */; };
+		E75FFB5520A4189E001A5052 /* m_07.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4120A4189E001A5052 /* m_07.wav */; };
+		E75FFB5620A4189E001A5052 /* win.aac in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4220A4189E001A5052 /* win.aac */; };
+		E75FFB5720A4189E001A5052 /* m_06.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4320A4189E001A5052 /* m_06.wav */; };
+		E75FFB5820A4189E001A5052 /* m_12.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4420A4189E001A5052 /* m_12.wav */; };
+		E75FFB5920A4189E001A5052 /* sendcard.aac in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4520A4189E001A5052 /* sendcard.aac */; };
+		E75FFB5A20A4189E001A5052 /* m_08.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4620A4189E001A5052 /* m_08.wav */; };
+		E75FFB5B20A4189E001A5052 /* normal.aac in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4720A4189E001A5052 /* normal.aac */; };
+		E75FFB5C20A4189E001A5052 /* m_09.wav in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB4820A4189E001A5052 /* m_09.wav */; };
+		E75FFB5F20A41E2F001A5052 /* PlaySoundTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFB5E20A41E2F001A5052 /* PlaySoundTool.m */; };
+		E75FFB6320A42A94001A5052 /* 咖啡.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6120A42A94001A5052 /* 咖啡.mp3 */; };
+		E75FFB6420A42A94001A5052 /* 煎饼侠.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6220A42A94001A5052 /* 煎饼侠.mp3 */; };
+		E75FFB6720A42E4D001A5052 /* PlayMusicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFB6620A42E4D001A5052 /* PlayMusicTool.m */; };
+		E75FFB8820A44BA7001A5052 /* 月半小夜曲.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6A20A44BA7001A5052 /* 月半小夜曲.lrc */; };
+		E75FFB8920A44BA7001A5052 /* 255319.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6B20A44BA7001A5052 /* 255319.lrc */; };
+		E75FFB8A20A44BA7001A5052 /* 14945107.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6C20A44BA7001A5052 /* 14945107.lrc */; };
+		E75FFB8B20A44BA7001A5052 /* 故乡.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6D20A44BA7001A5052 /* 故乡.lrc */; };
+		E75FFB8C20A44BA7001A5052 /* 一万次悲伤.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6E20A44BA7001A5052 /* 一万次悲伤.lrc */; };
+		E75FFB8D20A44BA7001A5052 /* 煎饼侠.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6F20A44BA7001A5052 /* 煎饼侠.lrc */; };
+		E75FFB8E20A44BA7001A5052 /* 10736444.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7020A44BA7001A5052 /* 10736444.lrc */; };
+		E75FFB8F20A44BA7001A5052 /* 夜空中最亮的星.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7120A44BA7001A5052 /* 夜空中最亮的星.lrc */; };
+		E75FFB9020A44BA7001A5052 /* 309769.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7220A44BA7001A5052 /* 309769.lrc */; };
+		E75FFB9120A44BA7001A5052 /* 235319.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7320A44BA7001A5052 /* 235319.lrc */; };
+		E75FFB9220A44BA7001A5052 /* 12309111.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7420A44BA7001A5052 /* 12309111.lrc */; };
+		E75FFB9320A44BA7001A5052 /* 339744.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7520A44BA7001A5052 /* 339744.lrc */; };
+		E75FFB9420A44BA7001A5052 /* 10405520.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7620A44BA7001A5052 /* 10405520.lrc */; };
+		E75FFB9520A44BA7001A5052 /* 120125029.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7720A44BA7001A5052 /* 120125029.lrc */; };
+		E75FFB9620A44BA7001A5052 /* 14945107.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7920A44BA7001A5052 /* 14945107.mp3 */; };
+		E75FFB9720A44BA7001A5052 /* 255319.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7A20A44BA7001A5052 /* 255319.mp3 */; };
+		E75FFB9820A44BA7001A5052 /* 一万次悲伤.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7B20A44BA7001A5052 /* 一万次悲伤.mp3 */; };
+		E75FFB9920A44BA7001A5052 /* 煎饼侠.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7C20A44BA7001A5052 /* 煎饼侠.mp3 */; };
+		E75FFB9A20A44BA7001A5052 /* 故乡.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7D20A44BA7001A5052 /* 故乡.mp3 */; };
+		E75FFB9B20A44BA7001A5052 /* 夜空中最亮的星.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7E20A44BA7001A5052 /* 夜空中最亮的星.mp3 */; };
+		E75FFB9C20A44BA7001A5052 /* 235319.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB7F20A44BA7001A5052 /* 235319.mp3 */; };
+		E75FFB9D20A44BA7001A5052 /* 309769.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8020A44BA7001A5052 /* 309769.mp3 */; };
+		E75FFB9E20A44BA7001A5052 /* 10736444.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8120A44BA7001A5052 /* 10736444.mp3 */; };
+		E75FFB9F20A44BA7001A5052 /* 1201111234.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8220A44BA7001A5052 /* 1201111234.mp3 */; };
+		E75FFBA020A44BA7001A5052 /* 10405520.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8320A44BA7001A5052 /* 10405520.mp3 */; };
+		E75FFBA120A44BA7001A5052 /* 120125029.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8420A44BA7001A5052 /* 120125029.mp3 */; };
+		E75FFBA220A44BA7001A5052 /* 12309111.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8520A44BA7001A5052 /* 12309111.mp3 */; };
+		E75FFBA320A44BA7001A5052 /* 339744.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8620A44BA7001A5052 /* 339744.mp3 */; };
+		E75FFBA420A44BA7001A5052 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8720A44BA7001A5052 /* Musics.plist */; };
+		E75FFBAB20A44D39001A5052 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFBAA20A44D39001A5052 /* Music.m */; };
+		E75FFBAE20A44E10001A5052 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFBAD20A44E10001A5052 /* NSObject+Extension.m */; };
 		E7DBC5E0209FF5520088E771 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBC5DF209FF5520088E771 /* AppDelegate.m */; };
 		E7DBC5E3209FF5520088E771 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBC5E2209FF5520088E771 /* ViewController.m */; };
 		E7DBC5E6209FF5520088E771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DBC5E4209FF5520088E771 /* Main.storyboard */; };
@@ -35,6 +93,70 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E740869720A57AF700A15AA2 /* LMusicTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMusicTableViewCell.h; sourceTree = "<group>"; };
+		E740869820A57AF700A15AA2 /* LMusicTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMusicTableViewCell.m; sourceTree = "<group>"; };
+		E740869A20A58C2A00A15AA2 /* LPlayMusicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPlayMusicViewController.h; sourceTree = "<group>"; };
+		E740869B20A58C2A00A15AA2 /* LPlayMusicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPlayMusicViewController.m; sourceTree = "<group>"; };
+		E740869D20A58C7E00A15AA2 /* LPlayMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LPlayMusicViewController.xib; sourceTree = "<group>"; };
+		E75FFB3520A4189E001A5052 /* m_16.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_16.wav; sourceTree = "<group>"; };
+		E75FFB3620A4189E001A5052 /* m_03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_03.wav; sourceTree = "<group>"; };
+		E75FFB3720A4189E001A5052 /* m_17.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_17.wav; sourceTree = "<group>"; };
+		E75FFB3820A4189E001A5052 /* m_15.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_15.wav; sourceTree = "<group>"; };
+		E75FFB3920A4189E001A5052 /* buyao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buyao.wav; sourceTree = "<group>"; };
+		E75FFB3A20A4189E001A5052 /* m_14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_14.wav; sourceTree = "<group>"; };
+		E75FFB3B20A4189E001A5052 /* lose.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = lose.aac; sourceTree = "<group>"; };
+		E75FFB3C20A4189E001A5052 /* m_04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_04.wav; sourceTree = "<group>"; };
+		E75FFB3D20A4189E001A5052 /* m_10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_10.wav; sourceTree = "<group>"; };
+		E75FFB3E20A4189E001A5052 /* m_11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_11.wav; sourceTree = "<group>"; };
+		E75FFB3F20A4189E001A5052 /* m_05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_05.wav; sourceTree = "<group>"; };
+		E75FFB4020A4189E001A5052 /* m_13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_13.wav; sourceTree = "<group>"; };
+		E75FFB4120A4189E001A5052 /* m_07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_07.wav; sourceTree = "<group>"; };
+		E75FFB4220A4189E001A5052 /* win.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = win.aac; sourceTree = "<group>"; };
+		E75FFB4320A4189E001A5052 /* m_06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_06.wav; sourceTree = "<group>"; };
+		E75FFB4420A4189E001A5052 /* m_12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_12.wav; sourceTree = "<group>"; };
+		E75FFB4520A4189E001A5052 /* sendcard.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = sendcard.aac; sourceTree = "<group>"; };
+		E75FFB4620A4189E001A5052 /* m_08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_08.wav; sourceTree = "<group>"; };
+		E75FFB4720A4189E001A5052 /* normal.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = normal.aac; sourceTree = "<group>"; };
+		E75FFB4820A4189E001A5052 /* m_09.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m_09.wav; sourceTree = "<group>"; };
+		E75FFB5D20A41E2F001A5052 /* PlaySoundTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaySoundTool.h; sourceTree = "<group>"; };
+		E75FFB5E20A41E2F001A5052 /* PlaySoundTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaySoundTool.m; sourceTree = "<group>"; };
+		E75FFB6120A42A94001A5052 /* 咖啡.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "咖啡.mp3"; sourceTree = "<group>"; };
+		E75FFB6220A42A94001A5052 /* 煎饼侠.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "煎饼侠.mp3"; sourceTree = "<group>"; };
+		E75FFB6520A42E4D001A5052 /* PlayMusicTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayMusicTool.h; sourceTree = "<group>"; };
+		E75FFB6620A42E4D001A5052 /* PlayMusicTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayMusicTool.m; sourceTree = "<group>"; };
+		E75FFB6A20A44BA7001A5052 /* 月半小夜曲.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "月半小夜曲.lrc"; sourceTree = "<group>"; };
+		E75FFB6B20A44BA7001A5052 /* 255319.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 255319.lrc; sourceTree = "<group>"; };
+		E75FFB6C20A44BA7001A5052 /* 14945107.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 14945107.lrc; sourceTree = "<group>"; };
+		E75FFB6D20A44BA7001A5052 /* 故乡.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "故乡.lrc"; sourceTree = "<group>"; };
+		E75FFB6E20A44BA7001A5052 /* 一万次悲伤.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "一万次悲伤.lrc"; sourceTree = "<group>"; };
+		E75FFB6F20A44BA7001A5052 /* 煎饼侠.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "煎饼侠.lrc"; sourceTree = "<group>"; };
+		E75FFB7020A44BA7001A5052 /* 10736444.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 10736444.lrc; sourceTree = "<group>"; };
+		E75FFB7120A44BA7001A5052 /* 夜空中最亮的星.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "夜空中最亮的星.lrc"; sourceTree = "<group>"; };
+		E75FFB7220A44BA7001A5052 /* 309769.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 309769.lrc; sourceTree = "<group>"; };
+		E75FFB7320A44BA7001A5052 /* 235319.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 235319.lrc; sourceTree = "<group>"; };
+		E75FFB7420A44BA7001A5052 /* 12309111.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 12309111.lrc; sourceTree = "<group>"; };
+		E75FFB7520A44BA7001A5052 /* 339744.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 339744.lrc; sourceTree = "<group>"; };
+		E75FFB7620A44BA7001A5052 /* 10405520.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 10405520.lrc; sourceTree = "<group>"; };
+		E75FFB7720A44BA7001A5052 /* 120125029.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 120125029.lrc; sourceTree = "<group>"; };
+		E75FFB7920A44BA7001A5052 /* 14945107.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 14945107.mp3; sourceTree = "<group>"; };
+		E75FFB7A20A44BA7001A5052 /* 255319.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 255319.mp3; sourceTree = "<group>"; };
+		E75FFB7B20A44BA7001A5052 /* 一万次悲伤.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "一万次悲伤.mp3"; sourceTree = "<group>"; };
+		E75FFB7C20A44BA7001A5052 /* 煎饼侠.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "煎饼侠.mp3"; sourceTree = "<group>"; };
+		E75FFB7D20A44BA7001A5052 /* 故乡.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "故乡.mp3"; sourceTree = "<group>"; };
+		E75FFB7E20A44BA7001A5052 /* 夜空中最亮的星.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "夜空中最亮的星.mp3"; sourceTree = "<group>"; };
+		E75FFB7F20A44BA7001A5052 /* 235319.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 235319.mp3; sourceTree = "<group>"; };
+		E75FFB8020A44BA7001A5052 /* 309769.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 309769.mp3; sourceTree = "<group>"; };
+		E75FFB8120A44BA7001A5052 /* 10736444.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10736444.mp3; sourceTree = "<group>"; };
+		E75FFB8220A44BA7001A5052 /* 1201111234.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1201111234.mp3; sourceTree = "<group>"; };
+		E75FFB8320A44BA7001A5052 /* 10405520.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10405520.mp3; sourceTree = "<group>"; };
+		E75FFB8420A44BA7001A5052 /* 120125029.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 120125029.mp3; sourceTree = "<group>"; };
+		E75FFB8520A44BA7001A5052 /* 12309111.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 12309111.mp3; sourceTree = "<group>"; };
+		E75FFB8620A44BA7001A5052 /* 339744.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 339744.mp3; sourceTree = "<group>"; };
+		E75FFB8720A44BA7001A5052 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
+		E75FFBA920A44D39001A5052 /* Music.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
+		E75FFBAA20A44D39001A5052 /* Music.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Music.m; sourceTree = "<group>"; };
+		E75FFBAC20A44E10001A5052 /* NSObject+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		E75FFBAD20A44E10001A5052 /* NSObject+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		E7DBC5DB209FF5520088E771 /* 音视频.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "音视频.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DBC5DE209FF5520088E771 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7DBC5DF209FF5520088E771 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +200,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E75FFB3420A4189E001A5052 /* 斗地主音频 */ = {
+			isa = PBXGroup;
+			children = (
+				E75FFB3520A4189E001A5052 /* m_16.wav */,
+				E75FFB3620A4189E001A5052 /* m_03.wav */,
+				E75FFB3720A4189E001A5052 /* m_17.wav */,
+				E75FFB3820A4189E001A5052 /* m_15.wav */,
+				E75FFB3920A4189E001A5052 /* buyao.wav */,
+				E75FFB3A20A4189E001A5052 /* m_14.wav */,
+				E75FFB3B20A4189E001A5052 /* lose.aac */,
+				E75FFB3C20A4189E001A5052 /* m_04.wav */,
+				E75FFB3D20A4189E001A5052 /* m_10.wav */,
+				E75FFB3E20A4189E001A5052 /* m_11.wav */,
+				E75FFB3F20A4189E001A5052 /* m_05.wav */,
+				E75FFB4020A4189E001A5052 /* m_13.wav */,
+				E75FFB4120A4189E001A5052 /* m_07.wav */,
+				E75FFB4220A4189E001A5052 /* win.aac */,
+				E75FFB4320A4189E001A5052 /* m_06.wav */,
+				E75FFB4420A4189E001A5052 /* m_12.wav */,
+				E75FFB4520A4189E001A5052 /* sendcard.aac */,
+				E75FFB4620A4189E001A5052 /* m_08.wav */,
+				E75FFB4720A4189E001A5052 /* normal.aac */,
+				E75FFB4820A4189E001A5052 /* m_09.wav */,
+			);
+			path = "斗地主音频";
+			sourceTree = "<group>";
+		};
+		E75FFB6020A42A94001A5052 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				E75FFB6120A42A94001A5052 /* 咖啡.mp3 */,
+				E75FFB6220A42A94001A5052 /* 煎饼侠.mp3 */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+		E75FFB6820A44BA7001A5052 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E75FFB6920A44BA7001A5052 /* Lrcs */,
+				E75FFB7820A44BA7001A5052 /* MP3s */,
+				E75FFB8720A44BA7001A5052 /* Musics.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E75FFB6920A44BA7001A5052 /* Lrcs */ = {
+			isa = PBXGroup;
+			children = (
+				E75FFB6A20A44BA7001A5052 /* 月半小夜曲.lrc */,
+				E75FFB6B20A44BA7001A5052 /* 255319.lrc */,
+				E75FFB6C20A44BA7001A5052 /* 14945107.lrc */,
+				E75FFB6D20A44BA7001A5052 /* 故乡.lrc */,
+				E75FFB6E20A44BA7001A5052 /* 一万次悲伤.lrc */,
+				E75FFB6F20A44BA7001A5052 /* 煎饼侠.lrc */,
+				E75FFB7020A44BA7001A5052 /* 10736444.lrc */,
+				E75FFB7120A44BA7001A5052 /* 夜空中最亮的星.lrc */,
+				E75FFB7220A44BA7001A5052 /* 309769.lrc */,
+				E75FFB7320A44BA7001A5052 /* 235319.lrc */,
+				E75FFB7420A44BA7001A5052 /* 12309111.lrc */,
+				E75FFB7520A44BA7001A5052 /* 339744.lrc */,
+				E75FFB7620A44BA7001A5052 /* 10405520.lrc */,
+				E75FFB7720A44BA7001A5052 /* 120125029.lrc */,
+			);
+			path = Lrcs;
+			sourceTree = "<group>";
+		};
+		E75FFB7820A44BA7001A5052 /* MP3s */ = {
+			isa = PBXGroup;
+			children = (
+				E75FFB7920A44BA7001A5052 /* 14945107.mp3 */,
+				E75FFB7A20A44BA7001A5052 /* 255319.mp3 */,
+				E75FFB7B20A44BA7001A5052 /* 一万次悲伤.mp3 */,
+				E75FFB7C20A44BA7001A5052 /* 煎饼侠.mp3 */,
+				E75FFB7D20A44BA7001A5052 /* 故乡.mp3 */,
+				E75FFB7E20A44BA7001A5052 /* 夜空中最亮的星.mp3 */,
+				E75FFB7F20A44BA7001A5052 /* 235319.mp3 */,
+				E75FFB8020A44BA7001A5052 /* 309769.mp3 */,
+				E75FFB8120A44BA7001A5052 /* 10736444.mp3 */,
+				E75FFB8220A44BA7001A5052 /* 1201111234.mp3 */,
+				E75FFB8320A44BA7001A5052 /* 10405520.mp3 */,
+				E75FFB8420A44BA7001A5052 /* 120125029.mp3 */,
+				E75FFB8520A44BA7001A5052 /* 12309111.mp3 */,
+				E75FFB8620A44BA7001A5052 /* 339744.mp3 */,
+			);
+			path = MP3s;
+			sourceTree = "<group>";
+		};
+		E75FFBA520A44CE8001A5052 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E740869A20A58C2A00A15AA2 /* LPlayMusicViewController.h */,
+				E740869B20A58C2A00A15AA2 /* LPlayMusicViewController.m */,
+				E740869D20A58C7E00A15AA2 /* LPlayMusicViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		E75FFBA620A44CF2001A5052 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E740869720A57AF700A15AA2 /* LMusicTableViewCell.h */,
+				E740869820A57AF700A15AA2 /* LMusicTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E75FFBA720A44D13001A5052 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E75FFBA920A44D39001A5052 /* Music.h */,
+				E75FFBAA20A44D39001A5052 /* Music.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E75FFBA820A44D24001A5052 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				E75FFBAC20A44E10001A5052 /* NSObject+Extension.h */,
+				E75FFBAD20A44E10001A5052 /* NSObject+Extension.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		E7DBC5D2209FF5520088E771 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +348,21 @@
 		E7DBC5DD209FF5520088E771 /* 音视频 */ = {
 			isa = PBXGroup;
 			children = (
+				E75FFBA820A44D24001A5052 /* category */,
+				E75FFBA720A44D13001A5052 /* model */,
+				E75FFBA620A44CF2001A5052 /* view */,
+				E75FFBA520A44CE8001A5052 /* controller */,
+				E75FFB6820A44BA7001A5052 /* Resources */,
+				E75FFB6020A42A94001A5052 /* music */,
+				E75FFB3420A4189E001A5052 /* 斗地主音频 */,
 				E7DBC5DE209FF5520088E771 /* AppDelegate.h */,
 				E7DBC5DF209FF5520088E771 /* AppDelegate.m */,
 				E7DBC5E1209FF5520088E771 /* ViewController.h */,
 				E7DBC5E2209FF5520088E771 /* ViewController.m */,
+				E75FFB5D20A41E2F001A5052 /* PlaySoundTool.h */,
+				E75FFB5E20A41E2F001A5052 /* PlaySoundTool.m */,
+				E75FFB6520A42E4D001A5052 /* PlayMusicTool.h */,
+				E75FFB6620A42E4D001A5052 /* PlayMusicTool.m */,
 				E7DBC5E4209FF5520088E771 /* Main.storyboard */,
 				E7DBC5E7209FF5540088E771 /* Assets.xcassets */,
 				E7DBC5E9209FF5540088E771 /* LaunchScreen.storyboard */,
@@ -194,6 +452,7 @@
 		E7DBC5D3209FF5520088E771 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = L;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "李姝睿";
 				TargetAttributes = {
@@ -235,9 +494,61 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75FFB9920A44BA7001A5052 /* 煎饼侠.mp3 in Resources */,
+				E75FFB5420A4189E001A5052 /* m_13.wav in Resources */,
+				E75FFB4B20A4189E001A5052 /* m_17.wav in Resources */,
+				E75FFB4A20A4189E001A5052 /* m_03.wav in Resources */,
+				E75FFB8820A44BA7001A5052 /* 月半小夜曲.lrc in Resources */,
+				E75FFB6320A42A94001A5052 /* 咖啡.mp3 in Resources */,
+				E75FFB9A20A44BA7001A5052 /* 故乡.mp3 in Resources */,
+				E75FFB9E20A44BA7001A5052 /* 10736444.mp3 in Resources */,
+				E75FFB9C20A44BA7001A5052 /* 235319.mp3 in Resources */,
+				E75FFB4C20A4189E001A5052 /* m_15.wav in Resources */,
+				E75FFB5320A4189E001A5052 /* m_05.wav in Resources */,
+				E75FFB9F20A44BA7001A5052 /* 1201111234.mp3 in Resources */,
+				E75FFB6420A42A94001A5052 /* 煎饼侠.mp3 in Resources */,
+				E75FFB9D20A44BA7001A5052 /* 309769.mp3 in Resources */,
 				E7DBC5EB209FF5540088E771 /* LaunchScreen.storyboard in Resources */,
+				E75FFB9520A44BA7001A5052 /* 120125029.lrc in Resources */,
+				E75FFBA420A44BA7001A5052 /* Musics.plist in Resources */,
+				E75FFBA220A44BA7001A5052 /* 12309111.mp3 in Resources */,
+				E75FFB9B20A44BA7001A5052 /* 夜空中最亮的星.mp3 in Resources */,
+				E75FFBA320A44BA7001A5052 /* 339744.mp3 in Resources */,
+				E740869E20A58C7E00A15AA2 /* LPlayMusicViewController.xib in Resources */,
+				E75FFB5720A4189E001A5052 /* m_06.wav in Resources */,
 				E7DBC5E8209FF5540088E771 /* Assets.xcassets in Resources */,
+				E75FFB5520A4189E001A5052 /* m_07.wav in Resources */,
+				E75FFB4D20A4189E001A5052 /* buyao.wav in Resources */,
+				E75FFB5820A4189E001A5052 /* m_12.wav in Resources */,
+				E75FFB9720A44BA7001A5052 /* 255319.mp3 in Resources */,
+				E75FFB5C20A4189E001A5052 /* m_09.wav in Resources */,
+				E75FFB4F20A4189E001A5052 /* lose.aac in Resources */,
+				E75FFB9420A44BA7001A5052 /* 10405520.lrc in Resources */,
+				E75FFB5B20A4189E001A5052 /* normal.aac in Resources */,
+				E75FFB8B20A44BA7001A5052 /* 故乡.lrc in Resources */,
+				E75FFB4E20A4189E001A5052 /* m_14.wav in Resources */,
+				E75FFB5020A4189E001A5052 /* m_04.wav in Resources */,
+				E75FFBA120A44BA7001A5052 /* 120125029.mp3 in Resources */,
+				E75FFB5220A4189E001A5052 /* m_11.wav in Resources */,
+				E75FFB9020A44BA7001A5052 /* 309769.lrc in Resources */,
+				E75FFB8F20A44BA7001A5052 /* 夜空中最亮的星.lrc in Resources */,
+				E75FFB9120A44BA7001A5052 /* 235319.lrc in Resources */,
+				E75FFB5A20A4189E001A5052 /* m_08.wav in Resources */,
+				E75FFB9220A44BA7001A5052 /* 12309111.lrc in Resources */,
+				E75FFB8C20A44BA7001A5052 /* 一万次悲伤.lrc in Resources */,
+				E75FFB5120A4189E001A5052 /* m_10.wav in Resources */,
+				E75FFB9820A44BA7001A5052 /* 一万次悲伤.mp3 in Resources */,
+				E75FFB8E20A44BA7001A5052 /* 10736444.lrc in Resources */,
+				E75FFB8A20A44BA7001A5052 /* 14945107.lrc in Resources */,
+				E75FFB8D20A44BA7001A5052 /* 煎饼侠.lrc in Resources */,
+				E75FFB9620A44BA7001A5052 /* 14945107.mp3 in Resources */,
 				E7DBC5E6209FF5520088E771 /* Main.storyboard in Resources */,
+				E75FFB9320A44BA7001A5052 /* 339744.lrc in Resources */,
+				E75FFB4920A4189E001A5052 /* m_16.wav in Resources */,
+				E75FFB8920A44BA7001A5052 /* 255319.lrc in Resources */,
+				E75FFBA020A44BA7001A5052 /* 10405520.mp3 in Resources */,
+				E75FFB5620A4189E001A5052 /* win.aac in Resources */,
+				E75FFB5920A4189E001A5052 /* sendcard.aac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +573,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E740869920A57AF700A15AA2 /* LMusicTableViewCell.m in Sources */,
 				E7DBC5E3209FF5520088E771 /* ViewController.m in Sources */,
 				E7DBC5EE209FF5540088E771 /* main.m in Sources */,
 				E7DBC5E0209FF5520088E771 /* AppDelegate.m in Sources */,
+				E75FFBAB20A44D39001A5052 /* Music.m in Sources */,
+				E75FFB6720A42E4D001A5052 /* PlayMusicTool.m in Sources */,
+				E75FFBAE20A44E10001A5052 /* NSObject+Extension.m in Sources */,
+				E740869C20A58C2A00A15AA2 /* LPlayMusicViewController.m in Sources */,
+				E75FFB5F20A41E2F001A5052 /* PlaySoundTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
