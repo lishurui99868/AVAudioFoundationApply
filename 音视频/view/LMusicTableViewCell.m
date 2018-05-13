@@ -30,7 +30,7 @@
     return cell;
 }
 
-- (void)setMusic:(Music *)music {
+- (void)setMusic:(LMusic *)music {
     _music = music;
     _nameLabel.text = music.name;
     _singerLabel.text = music.singer;

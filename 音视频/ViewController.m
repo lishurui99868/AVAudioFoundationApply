@@ -5,19 +5,20 @@
 //  Created by YY on 2018/5/7.
 //  Copyright © 2018年 李姝睿. All rights reserved.
 //
+#import "PlaySoundTool.h"
 
 #import "ViewController.h"
-#import <AVFoundation/AVFoundation.h>
-#import "PlaySoundTool.h"
-#import "PlayMusicTool.h"
-#import "NSObject+Extension.h"
-#import "Music.h"
+#import "LMusic.h"
+#import "LPlayMusicTool.h"
+#import "LMusicTool.h"
+
 #import "LMusicTableViewCell.h"
 #import "LPlayMusicViewController.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) NSArray *musics;
+@property (nonatomic, strong) LPlayMusicViewController *playVC;
 
 @property (nonatomic, strong) AVAudioRecorder *recoder;
 @property (nonatomic, strong) CADisplayLink *link;
@@ -27,11 +28,11 @@
 
 @implementation ViewController
 
-- (NSArray *)musics {
-    if (! _musics) {
-        _musics = [Music objcWithFileName:@"Musics.plist"];
+- (LPlayMusicViewController *)playVC {
+    if (! _playVC) {
+        _playVC = [[LPlayMusicViewController alloc] init];
     }
-    return _musics;
+    return _playVC;
 }
 
 
@@ -41,18 +42,37 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.musics.count;
+    return [[LMusicTool musics] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LMusicTableViewCell *cell = [LMusicTableViewCell cellWithTableView:tableView];
-    cell.music = self.musics[indexPath.row];
+    cell.music = [LMusicTool musics][indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    LMusic *music = [LMusicTool musics][indexPath.row];
+    // 特别提示 两行代码顺序关系
+    [LMusicTool setPlayingMusic:music];
+    [self.playVC show];
 }
+//当屏幕旋转的时候会来到此方法
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    // 设置播放界面的大小
+    [UIView animateWithDuration:0.25 animations:^{
+        CGRect rect = self.playVC.view.frame;
+        rect = CGRectMake(rect.origin.x, rect.origin.y, size.width, size.height);
+        self.playVC.view.frame = rect;
+    }];
+}
+
+
+
+
+
+
+
 
 - (IBAction)startRecord:(id)sender {
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -129,17 +149,5 @@
     [PlaySoundTool playSoundWithName:@"win.aac"];
 }
 
-- (IBAction)playMusic:(id)sender {
-    [PlayMusicTool playMusicWithName:@"咖啡.mp3"];
-}
-- (IBAction)pauseMusic:(id)sender {
-    [PlayMusicTool pauseMusicWithName:@"咖啡.mp3"];
-}
-- (IBAction)stopMusic:(id)sender {
-    [PlayMusicTool stopMusicWithName:@"咖啡.mp3"];
-}
-- (IBAction)playOther:(id)sender {
-    [PlayMusicTool playMusicWithName:@"煎饼侠.mp3"];
-}
 
 @end

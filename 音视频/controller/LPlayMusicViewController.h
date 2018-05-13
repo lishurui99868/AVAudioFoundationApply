@@ -10,4 +10,6 @@
 
 @interface LPlayMusicViewController : UIViewController
 
+- (void)show;
+
 @end

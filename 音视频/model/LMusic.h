@@ -1,17 +1,16 @@
 //
-//  Music.h
+//  LMusic.h
 //  音视频
 //
-//  Created by YY on 2018/5/10.
+//  Created by YY on 2018/5/13.
 //  Copyright © 2018年 李姝睿. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Music : NSObject
+@interface LMusic : NSObject
 ///歌曲名字
 @property (nonatomic, copy) NSString *name;
-
 ///音乐文件
 @property (nonatomic, copy) NSString *filename;
 ///歌词文件

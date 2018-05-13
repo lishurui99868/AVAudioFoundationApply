@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Music.h"
+#import "LMusic.h"
 
 @interface LMusicTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) Music *music;
+@property (nonatomic, strong) LMusic *music;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 

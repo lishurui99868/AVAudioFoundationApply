@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E712E2F220A80B240052F67E /* LMusicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E712E2F120A80B240052F67E /* LMusicTool.m */; };
+		E712E2F520A80B460052F67E /* LMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = E712E2F420A80B460052F67E /* LMusic.m */; };
+		E712E2F820A80E710052F67E /* LPlayMusicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E712E2F720A80E710052F67E /* LPlayMusicTool.m */; };
+		E712E2FB20A81CF10052F67E /* LLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E712E2FA20A81CF10052F67E /* LLabel.m */; };
+		E712E2FE20A822640052F67E /* LScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E712E2FD20A822640052F67E /* LScrollView.m */; };
+		E712E30120A823830052F67E /* LLrcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E712E30020A823830052F67E /* LLrcModel.m */; };
+		E712E30420A824ED0052F67E /* LLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E712E30320A824ED0052F67E /* LLrcTool.m */; };
 		E740869920A57AF700A15AA2 /* LMusicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E740869820A57AF700A15AA2 /* LMusicTableViewCell.m */; };
 		E740869C20A58C2A00A15AA2 /* LPlayMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E740869B20A58C2A00A15AA2 /* LPlayMusicViewController.m */; };
 		E740869E20A58C7E00A15AA2 /* LPlayMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E740869D20A58C7E00A15AA2 /* LPlayMusicViewController.xib */; };
@@ -33,7 +40,6 @@
 		E75FFB5F20A41E2F001A5052 /* PlaySoundTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFB5E20A41E2F001A5052 /* PlaySoundTool.m */; };
 		E75FFB6320A42A94001A5052 /* 咖啡.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6120A42A94001A5052 /* 咖啡.mp3 */; };
 		E75FFB6420A42A94001A5052 /* 煎饼侠.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6220A42A94001A5052 /* 煎饼侠.mp3 */; };
-		E75FFB6720A42E4D001A5052 /* PlayMusicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFB6620A42E4D001A5052 /* PlayMusicTool.m */; };
 		E75FFB8820A44BA7001A5052 /* 月半小夜曲.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6A20A44BA7001A5052 /* 月半小夜曲.lrc */; };
 		E75FFB8920A44BA7001A5052 /* 255319.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6B20A44BA7001A5052 /* 255319.lrc */; };
 		E75FFB8A20A44BA7001A5052 /* 14945107.lrc in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB6C20A44BA7001A5052 /* 14945107.lrc */; };
@@ -63,7 +69,6 @@
 		E75FFBA220A44BA7001A5052 /* 12309111.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8520A44BA7001A5052 /* 12309111.mp3 */; };
 		E75FFBA320A44BA7001A5052 /* 339744.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8620A44BA7001A5052 /* 339744.mp3 */; };
 		E75FFBA420A44BA7001A5052 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8720A44BA7001A5052 /* Musics.plist */; };
-		E75FFBAB20A44D39001A5052 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFBAA20A44D39001A5052 /* Music.m */; };
 		E75FFBAE20A44E10001A5052 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFBAD20A44E10001A5052 /* NSObject+Extension.m */; };
 		E7DBC5E0209FF5520088E771 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBC5DF209FF5520088E771 /* AppDelegate.m */; };
 		E7DBC5E3209FF5520088E771 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBC5E2209FF5520088E771 /* ViewController.m */; };
@@ -93,6 +98,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E712E2F020A80B240052F67E /* LMusicTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMusicTool.h; sourceTree = "<group>"; };
+		E712E2F120A80B240052F67E /* LMusicTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMusicTool.m; sourceTree = "<group>"; };
+		E712E2F320A80B460052F67E /* LMusic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMusic.h; sourceTree = "<group>"; };
+		E712E2F420A80B460052F67E /* LMusic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMusic.m; sourceTree = "<group>"; };
+		E712E2F620A80E710052F67E /* LPlayMusicTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPlayMusicTool.h; sourceTree = "<group>"; };
+		E712E2F720A80E710052F67E /* LPlayMusicTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPlayMusicTool.m; sourceTree = "<group>"; };
+		E712E2F920A81CF10052F67E /* LLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLabel.h; sourceTree = "<group>"; };
+		E712E2FA20A81CF10052F67E /* LLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLabel.m; sourceTree = "<group>"; };
+		E712E2FC20A822640052F67E /* LScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LScrollView.h; sourceTree = "<group>"; };
+		E712E2FD20A822640052F67E /* LScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LScrollView.m; sourceTree = "<group>"; };
+		E712E2FF20A823830052F67E /* LLrcModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLrcModel.h; sourceTree = "<group>"; };
+		E712E30020A823830052F67E /* LLrcModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLrcModel.m; sourceTree = "<group>"; };
+		E712E30220A824ED0052F67E /* LLrcTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLrcTool.h; sourceTree = "<group>"; };
+		E712E30320A824ED0052F67E /* LLrcTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLrcTool.m; sourceTree = "<group>"; };
 		E740869720A57AF700A15AA2 /* LMusicTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMusicTableViewCell.h; sourceTree = "<group>"; };
 		E740869820A57AF700A15AA2 /* LMusicTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMusicTableViewCell.m; sourceTree = "<group>"; };
 		E740869A20A58C2A00A15AA2 /* LPlayMusicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPlayMusicViewController.h; sourceTree = "<group>"; };
@@ -122,8 +141,6 @@
 		E75FFB5E20A41E2F001A5052 /* PlaySoundTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaySoundTool.m; sourceTree = "<group>"; };
 		E75FFB6120A42A94001A5052 /* 咖啡.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "咖啡.mp3"; sourceTree = "<group>"; };
 		E75FFB6220A42A94001A5052 /* 煎饼侠.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "煎饼侠.mp3"; sourceTree = "<group>"; };
-		E75FFB6520A42E4D001A5052 /* PlayMusicTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayMusicTool.h; sourceTree = "<group>"; };
-		E75FFB6620A42E4D001A5052 /* PlayMusicTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayMusicTool.m; sourceTree = "<group>"; };
 		E75FFB6A20A44BA7001A5052 /* 月半小夜曲.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "月半小夜曲.lrc"; sourceTree = "<group>"; };
 		E75FFB6B20A44BA7001A5052 /* 255319.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 255319.lrc; sourceTree = "<group>"; };
 		E75FFB6C20A44BA7001A5052 /* 14945107.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 14945107.lrc; sourceTree = "<group>"; };
@@ -153,8 +170,6 @@
 		E75FFB8520A44BA7001A5052 /* 12309111.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 12309111.mp3; sourceTree = "<group>"; };
 		E75FFB8620A44BA7001A5052 /* 339744.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 339744.mp3; sourceTree = "<group>"; };
 		E75FFB8720A44BA7001A5052 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
-		E75FFBA920A44D39001A5052 /* Music.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
-		E75FFBAA20A44D39001A5052 /* Music.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Music.m; sourceTree = "<group>"; };
 		E75FFBAC20A44E10001A5052 /* NSObject+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
 		E75FFBAD20A44E10001A5052 /* NSObject+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		E7DBC5DB209FF5520088E771 /* 音视频.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "音视频.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +215,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E712E2EF20A80AEC0052F67E /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				E712E2F020A80B240052F67E /* LMusicTool.h */,
+				E712E2F120A80B240052F67E /* LMusicTool.m */,
+				E712E2F620A80E710052F67E /* LPlayMusicTool.h */,
+				E712E2F720A80E710052F67E /* LPlayMusicTool.m */,
+				E712E30220A824ED0052F67E /* LLrcTool.h */,
+				E712E30320A824ED0052F67E /* LLrcTool.m */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
 		E75FFB3420A4189E001A5052 /* 斗地主音频 */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +331,10 @@
 			children = (
 				E740869720A57AF700A15AA2 /* LMusicTableViewCell.h */,
 				E740869820A57AF700A15AA2 /* LMusicTableViewCell.m */,
+				E712E2F920A81CF10052F67E /* LLabel.h */,
+				E712E2FA20A81CF10052F67E /* LLabel.m */,
+				E712E2FC20A822640052F67E /* LScrollView.h */,
+				E712E2FD20A822640052F67E /* LScrollView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -310,8 +342,10 @@
 		E75FFBA720A44D13001A5052 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				E75FFBA920A44D39001A5052 /* Music.h */,
-				E75FFBAA20A44D39001A5052 /* Music.m */,
+				E712E2F320A80B460052F67E /* LMusic.h */,
+				E712E2F420A80B460052F67E /* LMusic.m */,
+				E712E2FF20A823830052F67E /* LLrcModel.h */,
+				E712E30020A823830052F67E /* LLrcModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -348,6 +382,7 @@
 		E7DBC5DD209FF5520088E771 /* 音视频 */ = {
 			isa = PBXGroup;
 			children = (
+				E712E2EF20A80AEC0052F67E /* tool */,
 				E75FFBA820A44D24001A5052 /* category */,
 				E75FFBA720A44D13001A5052 /* model */,
 				E75FFBA620A44CF2001A5052 /* view */,
@@ -361,8 +396,6 @@
 				E7DBC5E2209FF5520088E771 /* ViewController.m */,
 				E75FFB5D20A41E2F001A5052 /* PlaySoundTool.h */,
 				E75FFB5E20A41E2F001A5052 /* PlaySoundTool.m */,
-				E75FFB6520A42E4D001A5052 /* PlayMusicTool.h */,
-				E75FFB6620A42E4D001A5052 /* PlayMusicTool.m */,
 				E7DBC5E4209FF5520088E771 /* Main.storyboard */,
 				E7DBC5E7209FF5540088E771 /* Assets.xcassets */,
 				E7DBC5E9209FF5540088E771 /* LaunchScreen.storyboard */,
@@ -575,13 +608,18 @@
 			files = (
 				E740869920A57AF700A15AA2 /* LMusicTableViewCell.m in Sources */,
 				E7DBC5E3209FF5520088E771 /* ViewController.m in Sources */,
+				E712E2FE20A822640052F67E /* LScrollView.m in Sources */,
+				E712E2F820A80E710052F67E /* LPlayMusicTool.m in Sources */,
+				E712E30120A823830052F67E /* LLrcModel.m in Sources */,
+				E712E2FB20A81CF10052F67E /* LLabel.m in Sources */,
+				E712E2F220A80B240052F67E /* LMusicTool.m in Sources */,
 				E7DBC5EE209FF5540088E771 /* main.m in Sources */,
+				E712E30420A824ED0052F67E /* LLrcTool.m in Sources */,
 				E7DBC5E0209FF5520088E771 /* AppDelegate.m in Sources */,
-				E75FFBAB20A44D39001A5052 /* Music.m in Sources */,
-				E75FFB6720A42E4D001A5052 /* PlayMusicTool.m in Sources */,
 				E75FFBAE20A44E10001A5052 /* NSObject+Extension.m in Sources */,
 				E740869C20A58C2A00A15AA2 /* LPlayMusicViewController.m in Sources */,
 				E75FFB5F20A41E2F001A5052 /* PlaySoundTool.m in Sources */,
+				E712E2F520A80B460052F67E /* LMusic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
