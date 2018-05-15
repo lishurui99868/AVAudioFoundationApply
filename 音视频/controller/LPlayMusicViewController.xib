@@ -50,7 +50,7 @@
                             <state key="normal" image="play"/>
                             <state key="selected" image="pause"/>
                             <connections>
-                                <action selector="playOrPause:" destination="-1" eventType="touchUpInside" id="4Ua-iS-teS"/>
+                                <action selector="playOrPause" destination="-1" eventType="touchUpInside" id="EmA-Gp-rul"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6d-KR-3ZH" userLabel="上一曲">
@@ -61,7 +61,7 @@
                             </constraints>
                             <state key="normal" image="previous"/>
                             <connections>
-                                <action selector="previous:" destination="-1" eventType="touchUpInside" id="Hmn-Xt-Aj6"/>
+                                <action selector="previous" destination="-1" eventType="touchUpInside" id="IuA-Sv-Or1"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9W-93-7ZG" userLabel="下一曲">
@@ -72,7 +72,7 @@
                             </constraints>
                             <state key="normal" image="next"/>
                             <connections>
-                                <action selector="next:" destination="-1" eventType="touchUpInside" id="EMm-vi-Kpu"/>
+                                <action selector="next" destination="-1" eventType="touchUpInside" id="PXb-6B-fwp"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIo-gS-O5I" userLabel="White View">
@@ -81,16 +81,19 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="5" id="vo4-sM-xhJ"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="Va4-he-7uY" appends="YES" id="XJo-8t-z3c"/>
+                            </connections>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhU-Lv-5ZE" userLabel="进度条">
-                            <rect key="frame" x="0.0" y="50" width="100" height="5"/>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhU-Lv-5ZE" userLabel="进度条">
+                            <rect key="frame" x="0.0" y="50" width="0.0" height="5"/>
                             <color key="backgroundColor" red="0.89631718400000004" green="0.1171328202" blue="0.12128130350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="100" id="BdJ-B8-Wje"/>
+                                <constraint firstAttribute="width" id="BdJ-B8-Wje"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR9-bX-J4O" userLabel="当前时间">
-                            <rect key="frame" x="98" y="7" width="45" height="25"/>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR9-bX-J4O" userLabel="当前时间">
+                            <rect key="frame" x="-2" y="7" width="45" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="45" id="Ojg-z2-pCx"/>
                                 <constraint firstAttribute="height" constant="25" id="laj-Ut-b6a"/>
@@ -110,16 +113,19 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cv-ZO-UiG" userLabel="滑块">
-                            <rect key="frame" x="100" y="42" width="41" height="21"/>
+                            <rect key="frame" x="0.0" y="42" width="41" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="41" id="I56-Ix-K3G"/>
                                 <constraint firstAttribute="height" constant="21" id="tQB-gB-0Df"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="00:00" backgroundImage="process_thumb"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="U7e-QR-ROw" appends="YES" id="SRE-ti-8TR"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.74493838029436621" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.74493838030000004" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="8cv-ZO-UiG" firstAttribute="top" secondItem="YR9-bX-J4O" secondAttribute="bottom" constant="10" id="2JP-lq-hZq"/>
                         <constraint firstItem="FIo-gS-O5I" firstAttribute="height" secondItem="lhU-Lv-5ZE" secondAttribute="height" id="3eq-ot-pba"/>
@@ -205,8 +211,9 @@
                         <constraint firstItem="N7P-oo-LM6" firstAttribute="leading" secondItem="Zhm-5H-UEt" secondAttribute="leading" constant="10" id="sGL-aS-Dio"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpM-cT-cw9" customClass="LScrollView">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpM-cT-cw9" customClass="LScrollView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUi-FU-rE6">
                     <rect key="frame" x="16" y="25" width="61" height="30"/>
@@ -225,11 +232,11 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="jpM-cT-cw9" firstAttribute="top" secondItem="Zhm-5H-UEt" secondAttribute="top" id="5Fe-S4-k7q"/>
-                <constraint firstItem="RsY-F4-K0H" firstAttribute="leading" secondItem="OsV-ei-jLw" secondAttribute="leading" id="C78-Gk-CLO"/>
+                <constraint firstItem="RsY-F4-K0H" firstAttribute="leading" secondItem="057-KW-TZl" secondAttribute="leading" id="C78-Gk-CLO"/>
                 <constraint firstItem="jpM-cT-cw9" firstAttribute="leading" secondItem="Zhm-5H-UEt" secondAttribute="leading" id="CZE-QO-9RM"/>
                 <constraint firstItem="RsY-F4-K0H" firstAttribute="top" secondItem="Zhm-5H-UEt" secondAttribute="bottom" id="E8g-4s-WBk"/>
-                <constraint firstItem="Zhm-5H-UEt" firstAttribute="trailing" secondItem="OsV-ei-jLw" secondAttribute="trailing" id="GMR-Jd-ftV"/>
-                <constraint firstItem="RsY-F4-K0H" firstAttribute="bottom" secondItem="OsV-ei-jLw" secondAttribute="bottom" id="LGn-VI-imA"/>
+                <constraint firstItem="Zhm-5H-UEt" firstAttribute="trailing" secondItem="057-KW-TZl" secondAttribute="trailing" id="GMR-Jd-ftV"/>
+                <constraint firstItem="RsY-F4-K0H" firstAttribute="bottom" secondItem="057-KW-TZl" secondAttribute="bottom" id="LGn-VI-imA"/>
                 <constraint firstItem="NfQ-re-LoC" firstAttribute="leading" secondItem="057-KW-TZl" secondAttribute="leading" id="LsI-2A-wqI"/>
                 <constraint firstItem="NfQ-re-LoC" firstAttribute="top" secondItem="057-KW-TZl" secondAttribute="top" id="QYa-kS-G8c"/>
                 <constraint firstItem="jpM-cT-cw9" firstAttribute="width" secondItem="Zhm-5H-UEt" secondAttribute="width" id="SN2-cm-x5K"/>
@@ -237,14 +244,24 @@
                 <constraint firstItem="TUi-FU-rE6" firstAttribute="top" secondItem="057-KW-TZl" secondAttribute="top" constant="25" id="aVB-gb-Hnd"/>
                 <constraint firstItem="Zhm-5H-UEt" firstAttribute="top" secondItem="057-KW-TZl" secondAttribute="top" id="cK5-h3-JmS"/>
                 <constraint firstAttribute="bottom" secondItem="NfQ-re-LoC" secondAttribute="bottom" id="hDr-MC-rOG"/>
-                <constraint firstItem="OsV-ei-jLw" firstAttribute="trailing" secondItem="RsY-F4-K0H" secondAttribute="trailing" id="j0g-mI-LJU"/>
+                <constraint firstAttribute="trailing" secondItem="RsY-F4-K0H" secondAttribute="trailing" id="j0g-mI-LJU"/>
                 <constraint firstItem="jpM-cT-cw9" firstAttribute="height" secondItem="Zhm-5H-UEt" secondAttribute="height" id="mvt-Wu-k6W"/>
-                <constraint firstItem="Zhm-5H-UEt" firstAttribute="leading" secondItem="OsV-ei-jLw" secondAttribute="leading" id="nSq-cL-fZ7"/>
+                <constraint firstItem="Zhm-5H-UEt" firstAttribute="leading" secondItem="057-KW-TZl" secondAttribute="leading" id="nSq-cL-fZ7"/>
                 <constraint firstItem="TUi-FU-rE6" firstAttribute="leading" secondItem="057-KW-TZl" secondAttribute="leading" constant="16" id="trR-HR-MG8"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="OsV-ei-jLw"/>
+            <viewLayoutGuide key="safeArea" id="KO1-xk-1l0"/>
             <point key="canvasLocation" x="-100" y="-160"/>
         </view>
+        <tapGestureRecognizer id="Va4-he-7uY">
+            <connections>
+                <action selector="tap:" destination="-1" id="Y61-dc-MFA"/>
+            </connections>
+        </tapGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="U7e-QR-ROw">
+            <connections>
+                <action selector="pan:" destination="-1" id="nea-Kw-1qf"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="next" width="26" height="26"/>

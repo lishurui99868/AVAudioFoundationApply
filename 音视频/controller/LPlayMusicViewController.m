@@ -58,7 +58,7 @@
 }
 
 - (void)show {
-    // 判断当前保存的music  和现在播放的是否为同一个
+    // 判断当前保存的music和现在播放的是否为同一个
     if (self.music != [LMusicTool playingMusic]) {
         [self stopMusic];
     }
@@ -134,7 +134,7 @@
     return [NSString stringWithFormat:@"%02d:%02d", minute, second];
 }
 #pragma mark 播放、暂停、上一首、下一首
-- (IBAction)playOrPause:(UIButton *)sender {
+- (IBAction)playOrPause {
     if (_playBtn.selected) {
         [LPlayMusicTool pauseMusicWithName:_music.filename];
         [self removeTimer];
@@ -147,18 +147,66 @@
     _playBtn.selected = ! _playBtn.selected;
 }
 
-- (IBAction)previous:(UIButton *)sender {
+- (IBAction)previous {
     [self stopMusic];
     [LMusicTool previousMusic];
     [self playMusic];
 }
 
-- (IBAction)next:(UIButton *)sender {
+- (IBAction)next {
     [self stopMusic];
     [LMusicTool nextMusic];
     [self playMusic];
 }
 
+- (IBAction)tap:(UITapGestureRecognizer *)sender {
+    CGPoint currentPoint = [sender locationInView:sender.view];
+    // 让滑块的中心点处在点击的点上
+    CGFloat progressWidth = currentPoint.x - _sliderBtn.frame.size.width * .5f;
+    if (progressWidth > _whiteView.frame.size.width - _sliderBtn.frame.size.width) {
+        progressWidth = _whiteView.frame.size.width - _sliderBtn.frame.size.width - 1;
+    }
+    if (progressWidth < 0) {
+        progressWidth = 0;
+    }
+    _progressWidth.constant = progressWidth;
+    CGFloat scale = progressWidth / (_whiteView.frame.size.width - _sliderBtn.frame.size.width);
+    _player.currentTime = scale * _player.duration;
+    [self upDataTime];
+}
+
+- (IBAction)pan:(UIPanGestureRecognizer *)sender {
+    CGPoint point = [sender translationInView:sender.view];
+    CGFloat changeX = point.x - self.point.x;
+    self.point = point;
+    _progressWidth.constant += changeX;
+    // 边界处理
+    if (_progressWidth.constant >= _whiteView.frame.size.width - _sliderBtn.frame.size.width) {
+        _progressWidth.constant = _whiteView.frame.size.width - _sliderBtn.frame.size.width - 1;
+    }
+    if (_progressWidth.constant < 0) {
+        _progressWidth.constant = 0;
+    }
+    CGFloat scale = _progressWidth.constant / (_whiteView.frame.size.width - _sliderBtn.frame.size.width);
+    NSTimeInterval currentTime = scale * self.player.duration;
+    [_sliderBtn setTitle:[self setUpTimeStrWithTime:currentTime] forState:UIControlStateNormal];
+    self.currentTimeLabel.text = [self setUpTimeStrWithTime:currentTime];
+    // 开始拖拽
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        [self removeTimer];
+        _currentTimeLabel.hidden = NO;
+    }
+    if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled) { // 从该位置进行播放
+        _player.currentTime = currentTime;
+        if (! _player.playing) {
+            [_player play];
+            _playBtn.selected = YES;
+        }
+        [self addTimer];
+        _currentTimeLabel.hidden = YES;
+        _point = CGPointZero;
+    }
+}
 #pragma mark 定时器
 - (void)addTimer {
     _timer = [NSTimer timerWithTimeInterval:1.f target:self selector:@selector(upDataTime) userInfo:nil repeats:YES];
@@ -182,12 +230,65 @@
 }
 // 添加歌词定时器
 - (void)addLink {
-    
+    _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateLrcData)];
+    [_link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void)removeLink {
-    
+    [_link invalidate];
+    _link = nil;
 }
+
+- (void)updateLrcData {
+    NSTimeInterval currentTime = _player.currentTime;
+    NSArray *lrcs = [LLrcTool lrcs];
+    for (int i = 0; i < lrcs.count; i ++) {
+        LLrcModel *lrc = lrcs[i];
+        NSTimeInterval time = [self setUpTimeWithLrcTime:lrc.time];
+        if (i + 1 < lrcs.count) {
+            LLrcModel *nextLrc = lrcs[i + 1];
+            NSTimeInterval nextTime = [self setUpTimeWithLrcTime:nextLrc.time];
+            if (time < currentTime && currentTime < nextTime) {
+                if (i % 2 == 0) {
+                    _topLrcLabel.text = lrc.lrc;
+                    _bottomLrcLabel.text = nextLrc.lrc;
+                    _topLrcLabel.progress = (currentTime - time) / (nextTime - time);
+                    _bottomLrcLabel.progress = 0;
+                } else {
+                    _bottomLrcLabel.text = lrc.lrc;
+                    _topLrcLabel.text = nextLrc.lrc;
+                    _bottomLrcLabel.progress = (currentTime - time) / (nextTime - time);
+                    _topLrcLabel.progress = 0;
+                }
+            }
+        }
+    }
+}
+// 字符串转换为时间 00:00.12
+- (NSTimeInterval)setUpTimeWithLrcTime:(NSString *)lrcTime {
+    NSString *minute = [lrcTime substringWithRange:NSMakeRange(0, 2)];
+    if ([minute hasPrefix:@"0"]) {
+        minute = [minute substringFromIndex:1];
+    }
+    NSString *second = [lrcTime substringWithRange:NSMakeRange(3, 2)];
+    if ([second hasPrefix:@"0"]) {
+        second = [second substringFromIndex:1];
+    }
+    NSString *mSecond = [lrcTime substringWithRange:NSMakeRange(6, 2)];
+    return minute.intValue * 60 + second.intValue + mSecond.intValue / 100;
+}
+
+#pragma mark AVAudioPlayerDelegate
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    if (flag) {
+        [self next];
+    }
+}
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.containerView.alpha = 1.f -  scrollView.contentOffset.x / scrollView.frame.size.width;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
