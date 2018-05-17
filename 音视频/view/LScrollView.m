@@ -13,7 +13,7 @@
 @interface LScrollView ()<UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-
+@property (nonatomic, assign) int index;
 @end
 @implementation LScrollView
 
@@ -48,10 +48,41 @@
     }
     LLrcModel *lrc = [LLrcTool lrcs][indexPath.row];
     cell.textLabel.text = lrc.lrc;
-    cell.textLabel.textColor = [UIColor redColor];
+    if (self.index == indexPath.row) {
+        cell.textLabel.textColor = [UIColor magentaColor];
+        cell.textLabel.font = [UIFont systemFontOfSize:20.f];
+    } else {
+        cell.textLabel.textColor = [UIColor yellowColor];
+        cell.textLabel.font = [UIFont systemFontOfSize:15.f];
+    }
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     return cell;
+}
+
+- (void)setCurrentTime:(NSTimeInterval)currentTime {
+    if (currentTime < _currentTime) {
+        self.index = 0;
+    }
+    _currentTime = currentTime;
+    NSArray *lrcs = [LLrcTool lrcs];
+    [_tableView reloadData];
+    // 通过当前时间找到时间对应的歌词
+    for (int i = 0; i < lrcs.count; i ++) {
+        LLrcModel *lrc = lrcs[i];
+        NSTimeInterval time = [LLrcTool setUpTimeWithLrcTime:lrc.time];
+        if (i + 1 < lrcs.count) {
+            LLrcModel *nextLrc = lrcs[i + 1];
+            NSTimeInterval nextTime = [LLrcTool setUpTimeWithLrcTime:nextLrc.time];
+            if (time < currentTime && currentTime < nextTime && i != self.index) {
+                NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.index inSection:0];
+                NSIndexPath *nowIndexPath = [NSIndexPath indexPathForRow:i inSection:0];
+                self.index = i;
+                [self.tableView reloadRowsAtIndexPaths:@[lastIndexPath, nowIndexPath] withRowAnimation:UITableViewRowAnimationTop];
+                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            }
+        }
+    }
 }
 
 @end

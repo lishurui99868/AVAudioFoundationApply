@@ -10,4 +10,6 @@
 
 @interface LScrollView : UIScrollView
 
+@property (nonatomic, assign) NSTimeInterval currentTime;
+
 @end

@@ -48,5 +48,18 @@ static NSArray *_lrcs;
 + (NSArray *)lrcs {
     return _lrcs;
 }
+// 字符串转换为时间 00:00.12
++ (NSTimeInterval)setUpTimeWithLrcTime:(NSString *)lrcTime {
+    NSString *minute = [lrcTime substringWithRange:NSMakeRange(0, 2)];
+    if ([minute hasPrefix:@"0"]) {
+        minute = [minute substringFromIndex:1];
+    }
+    NSString *second = [lrcTime substringWithRange:NSMakeRange(3, 2)];
+    if ([second hasPrefix:@"0"]) {
+        second = [second substringFromIndex:1];
+    }
+    NSString *mSecond = [lrcTime substringWithRange:NSMakeRange(6, 2)];
+    return minute.intValue * 60 + second.intValue + mSecond.intValue / 100;
+}
 
 @end

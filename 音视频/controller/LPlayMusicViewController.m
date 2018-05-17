@@ -241,13 +241,14 @@
 
 - (void)updateLrcData {
     NSTimeInterval currentTime = _player.currentTime;
+    _scrollView.currentTime = currentTime;
     NSArray *lrcs = [LLrcTool lrcs];
     for (int i = 0; i < lrcs.count; i ++) {
         LLrcModel *lrc = lrcs[i];
-        NSTimeInterval time = [self setUpTimeWithLrcTime:lrc.time];
+        NSTimeInterval time = [LLrcTool setUpTimeWithLrcTime:lrc.time];
         if (i + 1 < lrcs.count) {
             LLrcModel *nextLrc = lrcs[i + 1];
-            NSTimeInterval nextTime = [self setUpTimeWithLrcTime:nextLrc.time];
+            NSTimeInterval nextTime = [LLrcTool setUpTimeWithLrcTime:nextLrc.time];
             if (time < currentTime && currentTime < nextTime) {
                 if (i % 2 == 0) {
                     _topLrcLabel.text = lrc.lrc;
@@ -263,19 +264,6 @@
             }
         }
     }
-}
-// 字符串转换为时间 00:00.12
-- (NSTimeInterval)setUpTimeWithLrcTime:(NSString *)lrcTime {
-    NSString *minute = [lrcTime substringWithRange:NSMakeRange(0, 2)];
-    if ([minute hasPrefix:@"0"]) {
-        minute = [minute substringFromIndex:1];
-    }
-    NSString *second = [lrcTime substringWithRange:NSMakeRange(3, 2)];
-    if ([second hasPrefix:@"0"]) {
-        second = [second substringFromIndex:1];
-    }
-    NSString *mSecond = [lrcTime substringWithRange:NSMakeRange(6, 2)];
-    return minute.intValue * 60 + second.intValue + mSecond.intValue / 100;
 }
 
 #pragma mark AVAudioPlayerDelegate

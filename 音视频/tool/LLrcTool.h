@@ -18,4 +18,8 @@
  获取所有的歌词数据
  */
 + (NSArray *)lrcs;
+/**
+字符串转换为时间 00:00.12
+ */
++ (NSTimeInterval)setUpTimeWithLrcTime:(NSString *)lrcTime;
 @end
