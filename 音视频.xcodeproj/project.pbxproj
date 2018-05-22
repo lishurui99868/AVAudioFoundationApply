@@ -70,6 +70,10 @@
 		E75FFBA320A44BA7001A5052 /* 339744.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8620A44BA7001A5052 /* 339744.mp3 */; };
 		E75FFBA420A44BA7001A5052 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = E75FFB8720A44BA7001A5052 /* Musics.plist */; };
 		E75FFBAE20A44E10001A5052 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E75FFBAD20A44E10001A5052 /* NSObject+Extension.m */; };
+		E7A7F46620AEA315007C9852 /* LPlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A7F46420AEA315007C9852 /* LPlayVideoViewController.m */; };
+		E7A7F46720AEA315007C9852 /* LPlayVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A7F46520AEA315007C9852 /* LPlayVideoViewController.xib */; };
+		E7A7F46920AECC1C007C9852 /* Alizee_La_Isla_Bonita.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E7A7F46820AECC1C007C9852 /* Alizee_La_Isla_Bonita.mp4 */; };
+		E7A7F46B20AECE09007C9852 /* Cupid_高清.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E7A7F46A20AECE09007C9852 /* Cupid_高清.mp4 */; };
 		E7DBC5E0209FF5520088E771 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBC5DF209FF5520088E771 /* AppDelegate.m */; };
 		E7DBC5E3209FF5520088E771 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DBC5E2209FF5520088E771 /* ViewController.m */; };
 		E7DBC5E6209FF5520088E771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DBC5E4209FF5520088E771 /* Main.storyboard */; };
@@ -172,6 +176,11 @@
 		E75FFB8720A44BA7001A5052 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
 		E75FFBAC20A44E10001A5052 /* NSObject+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
 		E75FFBAD20A44E10001A5052 /* NSObject+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		E7A7F46320AEA315007C9852 /* LPlayVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPlayVideoViewController.h; sourceTree = "<group>"; };
+		E7A7F46420AEA315007C9852 /* LPlayVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPlayVideoViewController.m; sourceTree = "<group>"; };
+		E7A7F46520AEA315007C9852 /* LPlayVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LPlayVideoViewController.xib; sourceTree = "<group>"; };
+		E7A7F46820AECC1C007C9852 /* Alizee_La_Isla_Bonita.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Alizee_La_Isla_Bonita.mp4; sourceTree = "<group>"; };
+		E7A7F46A20AECE09007C9852 /* Cupid_高清.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cupid_高清.mp4"; sourceTree = "<group>"; };
 		E7DBC5DB209FF5520088E771 /* 音视频.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "音视频.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DBC5DE209FF5520088E771 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7DBC5DF209FF5520088E771 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -267,6 +276,8 @@
 		E75FFB6820A44BA7001A5052 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E7A7F46A20AECE09007C9852 /* Cupid_高清.mp4 */,
+				E7A7F46820AECC1C007C9852 /* Alizee_La_Isla_Bonita.mp4 */,
 				E75FFB6920A44BA7001A5052 /* Lrcs */,
 				E75FFB7820A44BA7001A5052 /* MP3s */,
 				E75FFB8720A44BA7001A5052 /* Musics.plist */,
@@ -322,6 +333,9 @@
 				E740869A20A58C2A00A15AA2 /* LPlayMusicViewController.h */,
 				E740869B20A58C2A00A15AA2 /* LPlayMusicViewController.m */,
 				E740869D20A58C7E00A15AA2 /* LPlayMusicViewController.xib */,
+				E7A7F46320AEA315007C9852 /* LPlayVideoViewController.h */,
+				E7A7F46420AEA315007C9852 /* LPlayVideoViewController.m */,
+				E7A7F46520AEA315007C9852 /* LPlayVideoViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -491,6 +505,11 @@
 				TargetAttributes = {
 					E7DBC5DA209FF5520088E771 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E7DBC5F2209FF5540088E771 = {
 						CreatedOnToolsVersion = 9.3;
@@ -536,6 +555,7 @@
 				E75FFB9A20A44BA7001A5052 /* 故乡.mp3 in Resources */,
 				E75FFB9E20A44BA7001A5052 /* 10736444.mp3 in Resources */,
 				E75FFB9C20A44BA7001A5052 /* 235319.mp3 in Resources */,
+				E7A7F46920AECC1C007C9852 /* Alizee_La_Isla_Bonita.mp4 in Resources */,
 				E75FFB4C20A4189E001A5052 /* m_15.wav in Resources */,
 				E75FFB5320A4189E001A5052 /* m_05.wav in Resources */,
 				E75FFB9F20A44BA7001A5052 /* 1201111234.mp3 in Resources */,
@@ -564,11 +584,13 @@
 				E75FFBA120A44BA7001A5052 /* 120125029.mp3 in Resources */,
 				E75FFB5220A4189E001A5052 /* m_11.wav in Resources */,
 				E75FFB9020A44BA7001A5052 /* 309769.lrc in Resources */,
+				E7A7F46720AEA315007C9852 /* LPlayVideoViewController.xib in Resources */,
 				E75FFB8F20A44BA7001A5052 /* 夜空中最亮的星.lrc in Resources */,
 				E75FFB9120A44BA7001A5052 /* 235319.lrc in Resources */,
 				E75FFB5A20A4189E001A5052 /* m_08.wav in Resources */,
 				E75FFB9220A44BA7001A5052 /* 12309111.lrc in Resources */,
 				E75FFB8C20A44BA7001A5052 /* 一万次悲伤.lrc in Resources */,
+				E7A7F46B20AECE09007C9852 /* Cupid_高清.mp4 in Resources */,
 				E75FFB5120A4189E001A5052 /* m_10.wav in Resources */,
 				E75FFB9820A44BA7001A5052 /* 一万次悲伤.mp3 in Resources */,
 				E75FFB8E20A44BA7001A5052 /* 10736444.lrc in Resources */,
@@ -609,6 +631,7 @@
 				E740869920A57AF700A15AA2 /* LMusicTableViewCell.m in Sources */,
 				E7DBC5E3209FF5520088E771 /* ViewController.m in Sources */,
 				E712E2FE20A822640052F67E /* LScrollView.m in Sources */,
+				E7A7F46620AEA315007C9852 /* LPlayVideoViewController.m in Sources */,
 				E712E2F820A80E710052F67E /* LPlayMusicTool.m in Sources */,
 				E712E30120A823830052F67E /* LLrcModel.m in Sources */,
 				E712E2FB20A81CF10052F67E /* LLabel.m in Sources */,

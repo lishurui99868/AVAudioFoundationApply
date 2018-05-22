@@ -15,6 +15,7 @@
 #import "LLrcModel.h"
 #import "LLabel.h"
 #import "LScrollView.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface LPlayMusicViewController ()<AVAudioPlayerDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *bgImgView;
@@ -114,6 +115,8 @@
     // 添加定时器
     [self addTimer];
     [self addLink];
+    
+    [self setUpLock];
 }
 
 - (void)stopMusic {
@@ -277,6 +280,38 @@
     self.containerView.alpha = 1.f -  scrollView.contentOffset.x / scrollView.frame.size.width;
 }
 
+- (void)setUpLock {
+    // 获取当前播放中心
+    MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
+    NSMutableDictionary *infoDic = [NSMutableDictionary dictionary];
+    infoDic[MPMediaItemPropertyArtist] = self.music.singer;
+    infoDic[MPMediaItemPropertyTitle] = self.music.name;
+    infoDic[MPMediaItemPropertyArtwork] = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:self.music.icon]];
+    infoDic[MPMediaItemPropertyPlaybackDuration] = @(self.player.duration);
+    infoDic[MPNowPlayingInfoPropertyElapsedPlaybackTime] = @(self.player.currentTime);
+    [center setNowPlayingInfo:infoDic];
+    // 设置远程操控
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+// 成为第一响应者
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    if (event.subtype == UIEventSubtypeRemoteControlPlay) {
+        [self playOrPause];
+    } else if (event.subtype == UIEventSubtypeRemoteControlPause) {
+        [self playOrPause];
+    } else if (event.subtype == UIEventSubtypeRemoteControlStop) {
+        [self stopMusic];
+    } else if (event.subtype == UIEventSubtypeRemoteControlNextTrack) {
+        [self previous];
+    } else if (event.subtype == UIEventSubtypeRemoteControlPreviousTrack) {
+        [self next];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

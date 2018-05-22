@@ -14,6 +14,7 @@
 
 #import "LMusicTableViewCell.h"
 #import "LPlayMusicViewController.h"
+#import "LPlayVideoViewController.h"
 
 @interface ViewController ()
 
@@ -147,6 +148,10 @@
 }
 - (IBAction)play3:(id)sender {
     [PlaySoundTool playSoundWithName:@"win.aac"];
+}
+- (IBAction)video:(id)sender {
+    LPlayVideoViewController *vc = [[LPlayVideoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

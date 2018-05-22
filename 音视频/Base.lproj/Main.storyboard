@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MusicList-->
         <scene sceneID="yjS-Wc-Rof">
             <objects>
                 <tableViewController id="6Db-ge-oMN" customClass="ViewController" sceneMemberID="viewController">
@@ -70,7 +70,13 @@
                             <outlet property="delegate" destination="6Db-ge-oMN" id="yue-gx-Jn6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5IY-VI-LKB"/>
+                    <navigationItem key="navigationItem" title="MusicList" id="5IY-VI-LKB">
+                        <barButtonItem key="rightBarButtonItem" title="video" id="xa1-5e-sxD">
+                            <connections>
+                                <action selector="video:" destination="6Db-ge-oMN" id="J7m-xs-vPP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icT-jY-2lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
